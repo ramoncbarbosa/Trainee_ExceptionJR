@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles/styles.css">
+    <!--LINKANDO O ARQUIVO CSS AO ARQUIVO HTML-->
+    <link rel="stylesheet" href="./styles/styles.css">
     <title>Document</title>
 </head>
 <body>  
@@ -22,20 +23,20 @@
         <fieldset class="skills__dev">
             <!--ÁREA DE INFORMAÇÃO DO DEV(SOBRENOME)-->
             <div class="informacao__dev">
-                <label for="nome"><strong>Nome</strong></label>
+                <label for="nome"><strong>Nome: </strong></label>
                 <input type="text" name="nome" id="nome" required>
             </div>
 
            <!--ÁREA DE INFORMAÇÃO DO DEV(SOBRENOME)-->
             <div class="informacao__dev">
-                <label for="sobrenome"><strong>Sobrenome</strong></label>
+                <label for="sobrenome"><strong>Sobrenome: </strong></label>
                 <input type="text" name="sobrenome" id="sobrenome" required>
             </div>
         </fieldset> 
 
         <!--ÁREA DE INFORMAÇÃO DO DEV(EMAIL)-->
         <div class="informacao__dev">
-            <label for="email"><strong>Email</strong></label>
+            <label for="email"><strong>Email: </strong></label>
             <input type="email" name="email" id="email" required>
         </div>
 
@@ -68,7 +69,7 @@
 
         <fieldset class="skills__dev">
             <!--ÁREA PARA PREENCHER AS SKILLS DO DEV-->
-            <div id="check">
+            <div id="check__dev">
                 <label><strong>Marque As Skills Que Domina</strong></label><br><br>
 
                 <input type="checkbox" id="skill1" name="tecnologia1" value="HTML">
