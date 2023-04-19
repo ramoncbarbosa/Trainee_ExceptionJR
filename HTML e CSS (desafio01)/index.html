@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-be">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/styles.css">
+    <title>Document</title>
+</head>
+<body>  
+
+    <!--CABEÇALHO BASE-->
+    <div>
+        <h1 id="titulo">Cadastro de Mestres em Desenvolvimento</h1>
+        <p id="subtitulo">Conte Sua Origem, Forasteiro</p>
+        <br>
+    </div>
+
+    <!--PRIMEIRO LIVRO-->
+    <form>
+
+        <fieldset class="skills__dev">
+            <!--ÁREA DE INFORMAÇÃO DO DEV(SOBRENOME)-->
+            <div class="informacao__dev">
+                <label for="nome"><strong>Nome</strong></label>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+
+           <!--ÁREA DE INFORMAÇÃO DO DEV(SOBRENOME)-->
+            <div class="informacao__dev">
+                <label for="sobrenome"><strong>Sobrenome</strong></label>
+                <input type="text" name="sobrenome" id="sobrenome" required>
+            </div>
+        </fieldset> 
+
+        <!--ÁREA DE INFORMAÇÃO DO DEV(EMAIL)-->
+        <div class="informacao__dev">
+            <label for="email"><strong>Email</strong></label>
+            <input type="email" name="email" id="email" required>
+        </div>
+
+        <!--SABER A ÁREA DE ATUAÇÃO DO DEV-->
+        <div class="informacao__dev">
+            <label><strong>De Qual Lado da Forção Você Se Encontra?</strong></label>
+            <label>
+                <input type="radio" name="developerWeb" value="frontend" checked>Front-end
+            </label>
+            <label>
+                <input type="radio" name="developerWeb" value="backend">Back-end
+            </label>
+            <label>
+                <input type="radio" name="developerWeb" value="fullstack">Fullstack
+            </label>
+        </div>
+
+        <!--LEVEL DO DEV-->
+        <div class="informacao__dev">
+            <label for="senioridade"><strong>Senioridade</strong></label>
+            <select id="senioridade" required>
+
+              <option selected disabled value="">Selecione</option>
+                <!--LEVEL DO DEV PRT. 2-->
+              <option>Júnior</option>
+              <option>Pleno</option>
+              <option>Sênior</option>
+            </select>
+        </div>
+
+        <fieldset class="skills__dev">
+            <!--ÁREA PARA PREENCHER AS SKILLS DO DEV-->
+            <div id="check">
+                <label><strong>Marque As Skills Que Domina</strong></label><br><br>
+
+                <input type="checkbox" id="skill1" name="tecnologia1" value="HTML">
+                <label for="skill1"> HTML</label>
+
+                <input type="checkbox" id="skill2" name="tecnologia2" value="CSS">
+                <label for="skill2"> CSS</label>
+
+                <input type="checkbox" id="skill3" name="tecnologia3" value="JavaScript">
+                <label for="skill3"> JavaScript</label>
+
+                <input type="checkbox" id="skill4" name="tecnologia4" value="PHP">
+                <label for="skill4"> PHP</label>
+
+                <input type="checkbox" id="skill5" name="tecnologia5" value="C#">
+                <label for="skill5"> C#</label>
+
+                <input type="checkbox" id="skill6" name="tecnologia6" value="Python">
+                <label for="skill6"> Python</label>
+
+                <input type="checkbox" id="skill7" name="tecnologia7" value="Java">
+                <label for="skill7"> Java</label>
+            </div>
+        </fieldset>
+
+        <!--ÁREA DE TEXTO-->
+        <div class="informacao__dev">
+            <br>
+            <label for="experiencia"><strong>Discorra Sobre Suas Experiencias: </strong></label>
+            <!--MUDAR ISSO PARA CSS DEPOIS-->
+            <textarea rows="6" style="width: 26em" id="experiencia" name="experiencia"></textarea>
+        </div>
+
+        <!--ENVIAR DADOS PREENCHIDOS-->
+        <button class="botao" type="submit" onsubmit="">ENVIAR!</button>            
+
+    </form>
+
+</body>
+
+</html>
