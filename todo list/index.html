@@ -10,7 +10,7 @@
     <script src="./javascript/script.js" defer></script>
     <!--LINK DO FONT AWESOME CDNJS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    
     <title>Todo Avançado</title>
 </head>
 <body>
@@ -18,15 +18,53 @@
     <header>
         <h1>Todo Avançado</h1>
     </header>
+    <!--INICIO DO ADD SUA TAREFA-->
     <form id="todo-form">
         <p>Adicione A(s) Sua(s) Tarefa(s)</p>
-        <div class="fomr-control">
+        <div class="form-control">
             <input type="text" id="todo-input" placeholder="O Que Você Vai Fazer?">
-            <button type="submit">
-                <i class="fa-thin-fa-plus"></i>
+            <button class="fa" type="submit">
+                <i class="fa-thin fa-plus"></i>
             </button>
         </div>
     </form>
+    <!--CAIXA DE EDIÇÃO DE TAREFA-->
+    <form id="edit-form">
+        <p>Edite a Sua Tarefa</p>
+        <div class="form-control">
+            <input type="text" id="edit-input">
+            <button class="fa" id="erase-buttom">
+                <!--OPÇÃO DE "+" PARA ADD A TAREFA-->
+                <i class="fa-solid fa-check-double"></i>
+            </button>
+        </div>
+    </form>
+    <!--BOTÃO PARA CANCELAR-->
+    <button class="fa" id="cancel-edit-btn">Cancelar</button>
    </div>
+   <!---->
+   <div id="toolbar">
+    <div id="search">
+      <h4>Pesquisar:</h4>
+      <form>
+        <input class="fa" type="text" id="search-input" placeholder="Buscar"/> 
+        <button class="fa" id="erase-button">
+          <i class="fa-solid fa-delete-left"></i>
+        </button>
+      </form>
+    </div>
+
+    <!---->
+    <div id="filter">
+      <h4>Filtrar:</h4>
+      <select class="fa" id="filter-select">
+        <option value="all">Todos</option>
+        <option value="done">Feitos</option>
+        <option value="todo">A Fazer</option>
+      </select>
+    </div>
+  </div>
+
+</div>
 </body>
 </html>
