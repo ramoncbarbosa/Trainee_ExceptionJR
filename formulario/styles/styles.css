@@ -1,0 +1,140 @@
+/*PADRONIZANDO MINHA PAGE*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*ESTILIZAÇAO USADA DIVERSAS VEZES*/
+:root{
+    /*CORES*/
+    --color-one: #380B61;
+    --color-two: #F0F8FF;
+    --color-three: #59429d;
+    --color-four: #FFFFFF;
+    --color-five: rgb(0,0,0,0.2);
+    --color-six: rgba(0,0,0,0.5);
+    --color-seven: #CCBBFF;
+    --color-eight: #E0E0F8;
+
+    /*FONTE*/
+    
+}
+
+
+/*O HASHTAG REPRESENTA O ID UTILIZADO ANTES*/
+/*ESTILIZANDO FONTE, COR E MARGEM A ESQUERDA*/
+#titulo {
+    font-family: sans-serif;
+    color: var(--color-one);
+    margin-left: 7%;
+} 
+
+/*ESTILIZANDO FONTE, COR E MARGEM A ESQUERDA*/
+#subtitulo {
+    font-family: sans-serif;
+    color: var(--color-one);
+    margin-left: 10%;
+} 
+
+/**/
+#check{
+    display: inline-block;
+}
+
+/*BORDAS ZERADAS*/
+fieldset {
+    border: 0;
+}
+
+fieldset.skills__dev .informacao__dev {
+    float:  left;
+    margin-right: 1em;
+}
+
+/*TAG BODY/CORPO: COR DE FUNDO, TIPO DA FONTE, TAMANHO DA FONTE, COR DA FONTE, MARGEM A ESQUERDA E MARGEM DE CIMA, JUSTIFICANDO AO CENTRO*/
+body{
+    background-color: var(--color-two);
+    font-family: sans-serif;
+    font-size: 1em;
+    color: var(--color-three);
+    margin-left: 36%;
+    margin-top: 2%;
+    justify-content: center;
+}
+
+/*ELEMENTOS INTERNOS DA TAG BODY: TIPO DE FONTE, TAMANHO DA FONTE, COR E RAIO DAS BORDAS*/
+input, select, textarea, button {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: var(--color-three);
+    border-radius: 5px;
+}
+
+/*CLASSE SKILLS__DEV: ANTES E DEPOIS = TABELA*/
+.skills__dev:before, .skills__dev:after {
+    display: table;
+}
+
+.skills__dev:after {
+    clear: both;
+}
+
+
+.informacao__dev {
+    margin-bottom: 1em;
+}
+
+.informacao__dev label {
+    margin-bottom: 0.2em;
+    color: var(--color-three);
+    display: block;
+}
+
+.informacao__dev input[type="text"],
+.informacao__dev input[type="email"],
+.informacao__dev select,
+.informacao__dev textarea {
+    padding: 0.2em;
+    border: 1px solid var(--color-three);
+    box-shadow: 2px 2px 2px var(--color-five);
+    display: block;
+}
+
+.informacao__dev select option {
+    padding-right: 1em;
+}
+
+.informacao__dev input:focus,
+.informacao__dev select:focus,
+.informacao__dev textarea:focus {
+    background: var(--color-eight);
+}
+
+
+.botao {
+    font-size: 1.2em;
+    background: #59429d;
+    border: 0;
+    margin-bottom: 1em;
+    color: #ffffff;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px var(--color-five);
+    text-shadow: 1px 1px 1px var(--color-six);
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+
+.botao:hover {
+    background: #CCBBFF;
+    box-shadow: inset 2px 2px 2px var(--color-five);
+    text-shadow: none;
+}
+
+.botao, select{
+    cursor: pointer;
+}
