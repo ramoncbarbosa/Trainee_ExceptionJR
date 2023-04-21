@@ -8,7 +8,7 @@
     --color-six: #395169;
     --color-seven: #444;
 }
-
+/*DETALHES GERAIS DA PÁGINA*/
 * {
     padding: 0;
     margin: 0;
@@ -21,8 +21,6 @@
     background-image: url("../images/bg.jpg");
     background-position: center;
     background-size: cover;
-
-    
     height: 100vh;
     width: 100vw
   }
@@ -63,7 +61,6 @@
     display: none;
   }
   
-  /* Todo Header */
   .todo-container {
     max-width: 450px;
     margin: 3rem auto 0;
@@ -78,7 +75,6 @@
     border-bottom: 1px solid var(--color-four);
   }
   
-  /* Todo Form */
   #todo-form,
   #edit-form {
     padding: 1rem;
