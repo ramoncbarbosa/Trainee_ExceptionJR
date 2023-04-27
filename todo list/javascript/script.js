@@ -4,9 +4,9 @@ const todoList = document.querySelector("#todo-list");
 const editForm = document.querySelector("#edit-form");
 const editInput = document.querySelector("#edit-input");
 const CancelEditBtn = document.querySelector("#cancel-edit-btn");
-const searchInput = document.querySelector('#search-input');
-const eraseBtn = document.querySelector('#erase-button');
-const filterBtn = document.querySelector('#filter-select');
+
+//GUARDANDO UM TITLE ANTIGO prt1
+    let oldInputValue;
 
 
 //FUNCIONALIDADES DO ARQUIVO DO TO-DO
@@ -19,7 +19,7 @@ const saveTodo =(text) => {
     todo.appendChild(todoTitle);
 
 
-    //BOTOES-TODO (add, editar e remover):
+    //BOTÕES-TODO (add, editar e remover):
     const doneBtn = document.createElement("button");
     doneBtn.classList.add("finish-todo");
     doneBtn.innerHTML = '<i class="fa-solid fa-check"></i>';
@@ -41,26 +41,83 @@ const saveTodo =(text) => {
     todoInput.value = "";
     todoInput.focus();
 
-}
+};
+
+    const updateToDo = (text) => {
+        const todos = document.querySelectorAll(".todos");
+
+        todos.forEach((todos) => {
+            let todoTitle = todos.querySelector("h3")
+
+        if(todoTitle.innerText === oldInputValue){
+            todoTitle.innerText = text;
+        };
+        })
+
+    };
 
 
-todoForm.addEventListener("submit", (e) => {
-    e.preventDefault();
+    //ESCONDENDO OS DADOS DO EDIT, TODO E LISTA (DEIXAR O USER MENOS DODÓI DA CABEÇA COM TANTAS INFORMAÇÕES)
+    const toggleForms = () => {
+        editForm.classList.toggle("hide");
+        todoForm.classList.toggle("hide");
+        todoList.classList.toggle("hide");
+    };
+
+todoForm.addEventListener("submit", (bott) => {
+    bott.preventDefault();
 
     const inputValue = todoInput.value;
 
     if(inputValue){
         saveTodo(inputValue);
-    }
-})
+    };
+});
 
 
     //CLICK DOS BOTÕES
-    document.addEventListener("click", (e) => {
-        const targeEl = e.target;
+    document.addEventListener("click", (bott) => {
+        const targeEl = bott.target;
+        const parentEl = targeEl.closest("div");
+        let todoTitle;
+
+
+        if(parentEl && parentEl.querySelector("h3")){
+            todoTitle = parentEl.querySelector("h3").innerText;
+        };
+
 
         if(targeEl.classList.contains("finish-todo")){
-            console.log("Click Para Finalização")
+            parentEl.classList.toggle("done");
+        }
+
+        if(targeEl.classList.contains("remove-todo")){
+            parentEl.remove();
+        }
+
+        if(targeEl.classList.contains("edit-todo")){
+            toggleForms();
+            //GUARDANDO DADOS ANTIGOS DO TITLE prt2
+            editInput.value = todoTitle;
+            oldInputValue = todoTitle;
         }
     })
 
+    //BOTÃO DE CANCELAR
+    CancelEditBtn.addEventListener("click", (bott) => {
+        bott.preventDefault();
+
+        toggleForms();
+    });
+
+    editForm.addEventListener("submit", (butt) => {
+        butt.preventDefault();
+
+        const editInputValue = editInput.value;
+
+        if(editInputValue){
+            updateToDo(editFormValue);
+        };
+
+        toggleForms();
+    });

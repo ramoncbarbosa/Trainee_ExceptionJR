@@ -166,10 +166,17 @@
   
   .done {
     background: var(--color-six);
+    border-radius: 10px;
   }
   
   .done h3 {
     color: var(--color-three);
     text-decoration: line-through;
     font-style: italic;
+  }
+
+  .finish-todo,
+  .edit-todo,
+  .remove-todo {
+    border-radius: 10px;
   }
